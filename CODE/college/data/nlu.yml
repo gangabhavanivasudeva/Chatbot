@@ -1,0 +1,145 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: admission
+  examples: |
+    - Tell me about the college addmission
+    - Tell me about fees structure
+    - Tell me about the branches
+    - Tell me about the seats for each branch
+    - Can you tell me about the college admission
+    - Can you tell me about fees structure
+    - Can you tell me about the branches
+    - Can you tell me about the seats for each branch
+    - Tell me about the professors for each branch
+    - Can you tell me about the professors for each branch
+
+- intent: placements
+  examples: |
+    - Tell me about the placements
+    - Can you tell me about the placements in the college
+
+- intent: infra
+  examples: |
+    - Tell me about the infrastructure
+    - Can you tell me about the infrastructure in the college
+
+- intent: hostelfees
+  examples: |
+    - Tell me about the hostelfees
+    - Can you tell me about the hostelfees in the college
+
+- intent: environment
+  examples: |
+    - Tell me about the environment
+    - Can you tell me about the environment in the college
+
+- intent: achievements
+  examples: |
+    - Tell me about the achievements
+    - Can you tell me about the achievements in the college
+
+- intent: naac
+  examples: |
+    - Tell me about the naac
+    - Can you tell me about the naac in the college
+
+- intent: nirf
+  examples: |
+    - Tell me about the nirf
+    - Can you tell me about the nirf in the college
+
+- intent: remind
+  examples: |
+    - I want to set reminder
+    - Please make a note
+    - set reminder
