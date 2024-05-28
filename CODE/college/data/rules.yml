@@ -1,0 +1,79 @@
+version: "3.0"
+
+rules:
+
+- rule: Greet User
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: activate order form
+  steps:
+  - intent: remind
+  - action: reminder_form
+  - active_loop: reminder_form
+
+- rule: submit form
+  condition:
+  - active_loop: reminder_form
+  steps:
+  - action: reminder_form
+  - active_loop: null
+  - action: action_rem
+
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask Admission
+  steps:
+  - intent: admission
+  - action: action_admission
+
+- rule: Ask Placements
+  steps:
+  - intent: placements
+  - action: action_placements
+
+- rule: Ask Infra
+  steps:
+  - intent: infra
+  - action: action_infra
+
+- rule: Ask Hostel Fees
+  steps:
+  - intent: hostelfees
+  - action: action_hostelfees
+
+- rule: Ask Environment
+  steps:
+  - intent: environment
+  - action: action_environment
+
+- rule: Ask Achievements
+  steps:
+  - intent: achievements
+  - action: action_achievements
+
+- rule: Ask naac
+  steps:
+  - intent: naac
+  - action: action_naac
+
+- rule: Ask nirf
+  steps:
+  - intent: nirf
+  - action: action_nirf
