@@ -1,0 +1,42 @@
+The output from the rasa test command indicates the testing process performed on the trained model of a Rasa chatbot. It starts with deprecation warnings related to certain APIs and packages. Then, it loads the trained model and proceeds to evaluate stories and predictions. The evaluation results on the conversation level show the accuracy of the model in predicting correct story paths, with a story report saved to a JSON file. The evaluation also includes testing of the action level, showing the accuracy, F1-score, precision, and confusion matrix for actions. Additionally, intent evaluation results are provided, including a classification report and a confusion matrix for intents, along with information on incorrect intent predictions saved to JSON files. Overall, the output provides comprehensive evaluation results for both conversation paths and intents of the Rasa chatbot's trained model.
+
+
+
+It shows the distribution of the confidence scores of the Rasa college chatbot’s intent predictions [1]. The x-axis of the graph is labeled “Confidence” and it ranges from 0.0 to 2.0. The y-axis is labeled “Number of Samples” and it ranges from 0 to 120.
+
+The bars on the left side of the graph represent the number of predictions that the college chatbot made with a confidence score between 0.6 and 1.0. The bars on the right side of the graph represent the number of predictions that the college chatbot made with a confidence score between 0.0 and 0.6. The tallest bar in the graph is at a confidence level of 0.97, which means that this was the most common confidence score for the chatbot’s correct predictions.
+
+Overall, the histogram shows that the college chatbot’s intent predictions were more likely to be correct when the chatbot had a higher confidence score.\
+
+
+
+
+
+Correct:          35 / 35
+F1-Score:         1.000
+Precision:        1.000
+Accuracy:         1.000
+
+
+
+Accuracy = (Sum of Diagonal Cells) / (Total Number of Predictions) * 100%
+Precision = (True Positives) / (True Positives + False Positives)
+Recall = (True Positives) / (True Positives + False Negatives)
+F1 Score = 2 * (Precision * Recall) / (Precision + Recall)
+Understanding the F1 Score:
+
+The F1 score ranges from 0 to 1, with 1 being the best score and 0 being the worst.
+A higher F1 score indicates a better balance between precision and recall.
+
+Additionally, you can calculate other metrics like precision, recall, and F1 score for each class to gain a more comprehensive understanding of the model's performance.
+
+Visualization:
+Story Visualization:
+The chatbot creates a graphical representation of the defined stories, making it easier to understand the flow of conversations and identify any patterns or inconsistencies.
+Rules Visualization:
+The chatbot generates a graphical representation of the defined rules, helping developers visualize the logic and conditions governing the behavior of the chatbot.
+This breakdown provides a detailed explanation of each section, including the purpose and outcomes of the validation, testing, and visualization processes in your Rasa chatbot project. Let me know if you need further clarification!
+
+The graph displays various input data in a sequential order, presenting information about different aspects of the college's programs, departments, offerings, and facilities
+
+Intent Confusion Matrix Fig 2 is the intent confusion matrix table, the vertical axis shows the true table and the horizontal axis shows the predicted table. True table shows the original data that is in the training data and for the predicted table is the data predicted by the model. If the same true table and predicted table meet at the point where they intersect, it indicates that the model predicts the data according to the original data entered. Intent classification prediction works well, there is only one misclassification when classifying intent, the model predicts the data to enter in umum_pendaftaran_waktu
