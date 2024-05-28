@@ -1,0 +1,272 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - programsoffered
+  - B.Tech
+  - M.Tech
+  - MBA
+  - Diplomo
+  - AI&ML
+  - Civil
+  - Cse
+  - CSE(AI&ML)
+  - CSE(Data Science)
+  - CSE(Iot)
+  - ECE
+  - ECT
+  - CST
+  - EEE
+  - IT
+  - MECH
+  - CSE(M.Tech)
+  - VLS&ES
+  - CE&SP
+  - Electronics
+  - CAD&CAM
+  - Coursesof MBA
+  - DECE
+  - DCME
+  - DEEE
+  - DME
+  - Dept
+  - AS&H.DT
+  - Civil.DT
+  - ECT.DT
+  - CSE.DT
+  - CST.DT
+  - ECE.DT
+  - EEE.DT
+  - IT.DT
+  - AI&ML.DT
+  - MECH.DT
+  - MBA.DT
+  - Infrastructure
+  - Placements
+  - Hostel
+  - FeeStructure
+  - Transport
+  - NAAC
+  - Sasi
+  - Sasievents
+  - Faculty
+  - FacultyCount
+  - Studentscount
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+  utter_programsoffered:
+  - text: "The programs offered at our college include 'B. Tech,M. Tech,MBA,Diploma'"
+
+
+  utter_B.Tech:
+  - text: 'Artificial Intelligence & Machine Learning,Civil Engineering,Computer Science & Engineering,Computer Science & Technology,CSE (Artificial Intelligence & Machine Learning),CSE ( Data Science),CSE ( Internet of Things and Cyber Security including Block Chain Technology),Electronics & Communication Engineering,Electronics & Communication Technology,Electrical & Electronics Engineering,Information Technology,Mechanical Engineering.'
+
+  utter_Artificial Intelligence & Machine Learning:
+  - text: 'The Artificial Intelligence & Machine Learning program spans four years with an intake of 60 students annually.'
+
+  utter_Civil Engineering:
+  - text: 'The Civil Engineering program has a duration of four years with an intake of 30 students.'
+
+  utter_Computer Science & Engineering:
+  - text: 'The Computer Science & Engineering program extends over four years with an intake of 180 students.'
+
+  utter_Computer Science & Technology:
+  - text: 'The Computer Science & Technology program has a duration of four years with an intake of 60 students.'
+
+  utter_CSE (Artificial Intelligence & Machine Learning):
+  - text: 'The CSE (Artificial Intelligence & Machine Learning) program is designed for a duration of four years with an intake capacity of 120 students.'
+
+  utter_CSE ( Data Science):
+  - text: 'The CSE (Data Science) program spans four years with an intake of 60 students.'
+
+  utter_CSE ( Internet of Things and Cyber Security including Block Chain Technology):
+  - text: 'The CSE (Internet of Things and Cyber Security including Blockchain Technology) program is structured for four years with an intake of 60 students.'
+
+  utter_Electronics & Communication Engineering:
+  - text: 'The Electronics & Communication Engineering program runs for four years with an intake of 180 students.'
+
+  utter_Electronics & Communication Technology:
+  - text: 'The Electronics & Communication Technology program lasts for four years with an annual intake of 60 students.'
+
+  utter_Electrical & Electronics Engineering:
+  - text: 'The Electrical & Electronics Engineering program has a duration of four years with an intake of 60 students.'
+
+  utter_Information Technology:
+  - text: 'The Information Technology program spans four years with an intake of 120 students.'
+
+  utter_Mechanical Engineering.:
+  - text: 'The Mechanical Engineering program is structured for a duration of four years with an intake of 30 students.'
+
+
+  utter_M.Tech:
+  - text: 'Computer Science & Engineering,VLSI&ES,CE&SP,Power Electronics,CAD&CAM'
+
+  utter_Computer Science & Engineering_M. Tech:
+  - text: 'The Computer Science & Engineering program is condensed into a two-year duration with an intake of 9 students.'
+
+  utter_VLSI&ES:
+  - text: 'The VLSI & Embedded Systems program is designed for a duration of two years with an intake of 9 students.'
+
+  utter_CE&SP:
+  - text: 'The CE&SP program is structured to run for two years with an intake of 9 students.'
+
+  utter_Power Electronics:
+  - text: 'The Power Electronics program is designed to be completed in two years with an intake of 9 students.'
+
+  utter_CAD&CAM:
+  - text: 'The CAD&CAM program is crafted to span two years with an intake of 9 students.'
+
+
+  utter_MBA:
+  - text: 'Master of Business Administration'
+  
+  utter_Master of Business Administration:
+  - text: 'The Master of Business Administration (MBA) program typically lasts for two years with intake of 60.'
+
+
+  utter_Diploma :
+  - text: 'DECE,DCME,DEEE,DME'
+
+  utter_DECE:
+  - text: 'The DECE (Diploma in Electronics and Communication Engineering) program is designed to be completed in three years with an intake of 60 students.'
+
+  utter_DCME:
+  - text: 'The DCME (Diploma in Computer Engineering) program is structured for a duration of three years with an intake of 60 students.'
+
+  utter_DEEE:
+  - text: 'The DEEE (Diploma in Electrical and Electronics Engineering) program is designed to be completed in three years with an intake of 60 students.'
+
+  utter_DME:
+  - text: 'The DME (Diploma in Mechanical Engineering) program spans three years with an intake of 30 students.'
+
+  utter_Dept :
+  - text: 'Our organizational structure comprises Applied Sciences & Humanities(AS& H),Civil Engineering,Electronics and Communication Technology,Computer Science & Engineering,Computer Science & Technology (CST),Electronics and Communication Engineering,Electrical & Electronics Engineering (EEE),Information Technology,Artificial Intelligence & Machine Learning (AI&ML),Mechanical Engineering,Master of Business Administration departments'
+
+  utter_AS&H.T :
+  - text: 'https://drive.google.com/file/d/1baYRsNdw-U-FUW-G5FbJkOIyCEye3fwi/view'
+
+  utter_Civil.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/1qw8l8TbZujj_ocoF7lpl9aAt-h45sFVH/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/1sfRSWvPUTvpZ5H31tI6HwBj2BRU-YEdE/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/1323qyMyoUjHQ41k5vC4YgSE5OYsfGfC3/view'
+
+  utter_ECT.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/1G06k7O0rbAz3WxYbqO5ELxRnUVVO5kUI/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/1vplgsTyP8Lb7YrEEASCHm0zPbnboCllg/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/15JS3fylaCway1DRBYhLCIF2q_4HqPyND/view'
+
+  utter_CSE.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/1kGLy0ROhzOk0Y-GqbD29gfefk17PlUQw/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/16IjBTGorz-wghfVwXKS6xr68BG3yE4d6/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/1gWtaztuXgaY-_dooGHPYpT-_oC3ZDntD/view'
+
+  utter_CST.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/1x_UgcTYpS2R0aeWvNlqbad0DabObAL0g/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/19jNwLAWmBW2TzGlCCtGhJp0lyc2PHDho/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/1i21F8p8LSVB180qMlw-TS3D26Fz3ytbh/view'
+
+  utter_ECE.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/1uG6StnV9WRYo6XNue5MZcma36uWfcZzt/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/1pmMJBJoVZXzYbDqkyuKdwRaa3F1AdJtP/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/1uykNpd0qloT11-FPuGZVxlFu2qocGlgN/view'
+
+  utter_EEE.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/1o2sr-6CamMi4QpY7hRLQkjECt5_BYLdC/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/1XhFPRyIz3StqAzouYx52AqlFv7KzMC3X/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/1BHzKa8-PYvEh3rqIQHdDEvuUw0FQr-J1/view'
+
+  utter_IT.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/12j8pW0BD8iRS1Dp6WU6fIDIrBG-an8sE/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/1YPtCIRBWBUPKlRv8wJKKY8iDWXXZbCoK/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/1Qjlj8FQq6S3_FGlQt3LTixfDRCYO9Ioc/view'
+
+  utter_AI&ML.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/18SY-6sHjpCTeF0oMJV8qgsQ-oNSPQ7gf/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/1z3jesI6IUbvHj4by52G9AHHPei5bIpkq/view
+	   CLICK HERE FOR IV/I TIMETABLE - Currently Not Available'
+
+  utter_MECH.T :
+  - text: 'CLICK HERE FOR II/I TIMETABLE - https://drive.google.com/file/d/1YupicRqk3f1pQ5OH-xhUpdl3G3Pfz4T6/view
+	   CLICK HERE FOR III/I TIMETABLE - https://drive.google.com/file/d/12joQqOC-1S1lEyfMTrWyswQ_TUnFqSnI/view
+	   CLICK HERE FOR IV/I TIMETABLE - https://drive.google.com/file/d/1D5wx7TNtxDPNdo2aEfo0GW3kRGAukC6f/view'
+
+  utter_MBA.T :
+  - text: 'CLICK HERE FOR SEMI TIMETABLE - https://drive.google.com/file/d/15adcvTmgRa0O_NWuGcYyT0qdTdANYA2y/view
+	   CLICK HERE FOR SEMII TIMETABLE - Currently Not Available
+	   CLICK HERE FOR SEMIII TIMETABLE - https://drive.google.com/file/d/1D-k6EKH05IzMZ4ioU_16CmlLHTUg5K_g/view'
+
+
+
+  utter_infra:
+  - text: "The college, with its classic infrastructure and abundant greenery, provides a pleasant atmosphere for learning. It boasts vast classrooms equipped with projectors and smart screens, facilitating interactive teaching. The central library offers a diverse range of resources, catering to every course and academic need. Separate hostel facilities for boys and girls ensure a safe and comfortable living environment, albeit with slightly expensive fees. Despite the cost, the hostel provides good food, 24/7 water, and a focus on healthy surroundings. The canteen offers decent food options, albeit at a higher price point. Additionally, amenities like a medical dispensary and a large sports ground contribute to the overall well-being and development of students.CLICK THIS FOE MORE https://docs.google.com/document/d/1V8fXvpFJfRAwdEhjPVYkUjxxy_dKSV6Y/edit "
+
+  utter_placements:
+  - text: "In the previous year, the college's placement drive depicted a robust landscape of employment opportunities for its graduating cohort. With a total of 777 offers extended, the campus experienced a notable surge in job prospects across various disciplines. Among these, the Computer Science and Engineering (CSE) department emerged as a key focal point, securing 243 placements, closely followed by Mechanical Engineering (ME) with 268 offers. The Information Technology (IT) sector also demonstrated significant interest, providing 56 placements. Notably, the campus witnessed a considerable number of single offers, indicating direct placements for 461 students. This emphasized the strong alignment between student skills and industry requirements. The high level of student engagement was evident, with 599 individuals actively participating in the recruitment process, showcasing their enthusiasm and readiness for professional roles. Major industry players such as Amazon, TCS, Infosys, and Wipro played pivotal roles, offering competitive compensation packages ranging from 3 to 60 LPA. Overall, the college's placement efforts in the previous year underscored its commitment to facilitating diverse and rewarding career pathways for its students, setting a strong foundation for their future endeavors.FOR MORE ANALYSIS PLEASE REFER https://www.sasi.ac.in/placements-summary/ "
+
+  utter_hstl:
+  - text: "The hostel at SITE offers comprehensive facilities to ensure a comfortable and secure living environment for its students. Located within the college premises, separate accommodations are provided for male and female students. The hostel features spacious rooms that are fully furnished, with round-the-clock access to RO mineral water and uninterrupted electricity and water supply. Hygienic and quality food is served in a spacious mess, with separate seating arrangements for boys and girls. Resident wardens ensure discipline and provide guidance, while a standby power generator and security guard ensure safety during power failures. 
+     Additionally, the hostel offers various amenities including a provision store, coin telephones, indoor gaming facilities, and a computer lab. First aid services are available, and senior faculty provide supervision. Furthermore, assistant wardens offer consultation and guidance to students. The campus also houses a Central Bank ATM for convenience. Students are encouraged to engage in co-curricular and extra-curricular activities such as the Hostel Premier League, 'Seminar Junction' events, and short film contests, promoting holistic development. Overall, the hostel at SITE strives to create a conducive environment for academic growth and personal enrichment.
+     PLZ CONTACT M. Vijaya Krishna,
+     Coordinator,
+     Hostel Committee,
+     SASI Institute of Technology & Engineering,
+     Tadepalligudem- 534101
+     Email id :hostel@sasi.ac.in
+     FOR MORE INFORMATION"
+
+  utter_fee:
+  - text: "The fee structure for the academic year 2023-24 includes a fee of ₹25,000 for the Diploma program. For the B.Tech program, Category A students are required to pay ₹50,270, while Category B students pay ₹150,810 for the first year and ₹50,270 for subsequent years. M.Tech program fees stand at ₹66,000 for both Category A and B students. MBA students, regardless of category, are charged ₹35,000 for the academic year 2023-24."
+
+  utter_transport:
+  - text: "The transportation facility provided by the Transport Committee covers a wide radius of 70 km for both students and staff. The committee coordinates various bus routes regularly with the help of bus in-charges and supervises daily bus operations, providing instructions as necessary. They also inspect the condition of buses, report for necessary actions, and periodically check bus documents while maintaining ISO documents.
+     Here is the comprehensive list of bus routes provided by the committee: https://docs.google.com/spreadsheets/d/1E3_jHqTGP44sqMrnvCh4uYwgbSL0BPllS86pIYeea64/edit#gid=0  With these extensive routes, the transportation facility for the college is comprehensive, ensuring accessibility for both students and staff within the specified radius.FOR CONTACT R Narendra Kumar,Coordinator,Transport Committee,SASI Institute of Technology & Engineering,Tadepalligudem- 534101,email id :transport@sasi.ac.in"
+
+  utter_naac:
+  - text: "Sure, here is the link for NAAC details of the college: [NAAC Details](https://naac.sasi.ac.in/)"
+
+  utter_sasi:
+  - text: "SASI Institute of Technology & Engineering, established over 42 years ago, has evolved from offering four undergraduate programs to now providing eight undergraduate, six postgraduate, and three diploma programs. Notably, it has secured accreditations from NAAC and NBA, alongside 2(f) & 12(b) status and permanent affiliation from JNTUK. Rooted in West and East Godavari districts, the institute, under the SASI Educational Society, upholds strong values and aims to be a leader in professional education, fostering innovation, ethical citizenship, and global standards. With a commitment to continuous improvement, it creates a conducive environment for active learning, research, and consultancy, aspiring to propel societal transformations.
+     https://drive.google.com/file/d/1ElC1l5CIy2H0-Ad36IOgMfaf9n6LRq3v/view"
+
+  utter_events:
+  - text: "MOU with foreign University(https://www.sasi.ac.in/mou-with-foreign-university/),Folk Youth Forum Presents Hare Krishna Utsav at Tadépalligudem.(https://www.sasi.ac.in/folk-youth-forum-presents-hare-krishna-utsav-at-tadepalligudem/),Social & Sustainable Innovations in Technology & Engineering(https://www.sasi.ac.in/social-sustainable-innovations-in-technology-engineering/),2024 International Conference On Social And Sustainable Innovations In Technology And Engineering Sasi-ite'24,Two days workshop on Art of Writing Quality Funding Proposal on coming 3rd and 4th, February, 2023 in face-to-face mode"
+
+  utter_faculty:
+  - text: "Here is the detailed one : https://docs.google.com/spreadsheets/d/1Vg9-gPgJICoIrcuJ3UMWsefpHeAO0pdRYbNfa28c6mE/edit?usp=sharing"
+
+  utter_facultycount:
+  - text: "Total number of faculty available : 208"
+
+  utter_studentscount:
+  - text: "Nearly 1500 Students"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
