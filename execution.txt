@@ -1,0 +1,42 @@
+OWN
+-------->>
+CREATING VIRTUALENV    [python -m venv .\Venv]
+ACTIVATING ENV   [.\Venv\scripts\activate]
+--if function disables [set-ExecutionPolicy RemoteSigned -Scope CurrentUser][Get-ExecutionPolicy][Get-ExecutionPolicy -list]
+INSTALL RASA   [pip install rasa][pip install rasa[full]]
+CREATE BOT STR [rasa init]
+Directory,not empty-y,train-y
+--you can directly interact or
+Training cmds [rasa train nlu]
+RUN RASA SHELL  [rasa shell] -- you can interact directly interact on cmd
+
+
+
+Python 3.9.13
+
+
+TakeOFF
+--------->>
+Execution steps:
+conda activate rasa
+1. in terminal type cd collage (and enter)
+	
+	type python -m rasa run---enter
+
+2. again open another terminal and type cd collage (and enter)
+
+	type python -m rasa run actions----enter
+
+3. now open another terminal and type cd collage (and enter)
+
+	type cd webapp
+	type python manage.py runserver
+	copy the link and paste it in chrome only
+
+
+C:\Users\chinn\OneDrive\Desktop\project1\main code\final\CODE\data\nlu.yml
+
+FOR ANY CLARIFICATION
+--------------------
+https://rasa.com/docs/rasa/2.x/installation
+
