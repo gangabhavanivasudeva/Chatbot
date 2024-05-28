@@ -1,0 +1,171 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: About College Programs
+  steps:
+  - intent: programsoffered
+  - action: utter_programsoffered
+
+- story: Program1
+  steps:
+  - intent: B.Tech
+  - action: utter_B.Tech
+
+- story: B.Tech Courses
+  steps:
+  - intent: AI&ML
+  - action: utter_Artificial Intelligence & Machine Learning
+  - intent: Civil
+  - action: utter_Civil Engineering
+  - intent: Cse
+  - action: utter_Computer Science & Engineering
+  - intent: CST
+  - action: utter_Computer Science & Technology
+  - intent: CSE(AI&ML)
+  - action: utter_CSE (Artificial Intelligence & Machine Learning)
+  - intent: CSE(Data Science)
+  - action: utter_CSE ( Data Science)
+  - intent: CSE(Iot)
+  - action: utter_CSE ( Internet of Things and Cyber Security including Block Chain Technology)
+  - intent: ECE
+  - action: utter_Electronics & Communication Engineering
+  - intent: ECT
+  - action: utter_Electronics & Communication Technology
+  - intent: EEE
+  - action: utter_Electrical & Electronics Engineering
+  - intent: IT
+  - action: utter_Information Technology
+  - intent: MECH
+  - action: utter_Mechanical Engineering.
+
+
+- story: Program2
+  steps:
+  - intent: M.Tech
+  - action: utter_M.Tech
+
+- story: M.Tech Courses
+  steps:
+  - intent: CSE(M.Tech)
+  - action: utter_Computer Science & Engineering_M. Tech
+  - intent: VLS&ES
+  - action: utter_VLSI&ES
+  - intent: CE&SP
+  - action: utter_CE&SP
+  - intent: Electronics
+  - action: utter_Power Electronics
+  - intent: CAD&CAM
+  - action: utter_CAD&CAM
+
+
+- story: Program3
+  steps:
+  - intent: MBA
+  - action: utter_MBA
+
+- story: MBACourses
+  steps:
+  - intent: Coursesof MBA
+  - action: utter_Master of Business Administration
+
+- story: Diplomo
+  steps:
+  - intent: Diplomo
+  - action: utter_Diploma 
+
+- story: Diplomo Courses
+  steps:
+  - intent: DECE
+  - action: utter_DECE
+  - intent: DCME
+  - action: utter_DCME
+  - intent: DEEE
+  - action: utter_DEEE
+  - intent: DME
+  - action: utter_DME
+
+
+
+- story: Departments
+  steps:
+  - intent: Dept
+  - action: utter_Dept
+
+- story: TimeTables
+  steps:
+  - intent: AS&H.DT
+  - action: utter_AS&H.T
+  - intent: Civil.DT
+  - action: utter_Civil.T
+  - intent: ECT.DT
+  - action: utter_ECT.T
+  - intent: CSE.DT
+  - action: utter_CSE.T
+  - intent: CST.DT
+  - action: utter_CST.T
+  - intent: ECE.DT
+  - action: utter_ECE.T
+  - intent: EEE.DT
+  - action: utter_EEE.T
+  - intent: IT.DT
+  - action: utter_IT.T
+  - intent: AI&ML.DT
+  - action: utter_AI&ML.T
+  - intent: MECH.DT
+  - action: utter_MECH.T
+  - intent: MBA.DT
+  - action: utter_MBA.T
+
+
+- story: About College
+  steps:
+  - intent: Sasi
+  - action: utter_sasi
+  - intent: Infrastructure
+  - action: utter_infra
+  - intent: Placements
+  - action: utter_placements
+  - intent: Hostel
+  - action: utter_hstl
+  - intent: FeeStructure
+  - action: utter_fee
+  - intent: Transport
+  - action: utter_transport
+  - intent: NAAC
+  - action: utter_naac
+  - intent: Sasievents
+  - action: utter_events
+  - intent: Faculty
+  - action: utter_faculty
+  - intent: FacultyCount
+  - action: utter_facultycount
+  - intent: Studentscount
+  - action: utter_studentscount

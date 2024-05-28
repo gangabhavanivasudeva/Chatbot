@@ -1,0 +1,665 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hy
+    - hai
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - fine
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: programsoffered
+  examples: |
+    - programsoffered?
+    - What are the programs available in this college?
+    - Could you provide information about the programs offered here?
+    - Can you list the programs available for study at this college?
+    - What majors or degrees does this college offer?
+    - I'm interested in learning about the academic programs here. Can you help?
+    - Could you tell me more about the courses or degrees available?
+    - What kind of programs can I expect to find at this college?
+    - Do you have any information on the academic offerings of this institution?
+    - I'm curious about the educational programs. Where can I find information about them?
+    - What are the areas of study or disciplines covered by this college?
+
+- intent: B.Tech
+  examples: |
+    - BTech
+    - Bachelor of Technology
+    - What are the courses offered in the B.Tech program?
+    - Can you list the majors available within the B.Tech degree?
+    - I'm interested in the B.Tech program. What specific areas of study does it cover?
+    - Could you give me an overview of the courses included in the B.Tech program?
+    - What are the core courses required for completing a B.Tech degree?
+    - I'm considering enrolling in B.Tech. What are the different specializations or concentrations available?
+
+- intent: AI&ML
+  examples: |
+    - aiml
+    - Artificial Intelligence & Machine Learning
+    - Could you provide information about the AI & ML course?
+    - What are the details of the AI & ML course?
+    - How many available seats are there in the AI & ML course?
+    - Are there any seats left for the AI & ML course?
+    - What is the duration of the AI & ML course?
+    - How many years does the AI & ML course last?
+
+- intent: Civil
+  examples: |
+    - civil
+    - Could you provide information about the Civil course?
+    - What are the details of the Civil course?
+    - How many available seats are there in the Civil course?
+    - Are there any seats left for the Civil course?
+    - What is the duration of the Civil course?
+    - How many years does the Civil course last?
+
+- intent: Cse
+  examples: |
+    - cse
+    - seats
+    - Computer Science and Engineering
+    - Could you provide information about the Cse course?
+    - What are the details of the Cse course?
+    - How many available seats are there in the Cse course?
+    - Are there any seats left for the Cse course?
+    - What is the duration of the Cse course?
+    - How many years does the Cse course last?
+
+- intent: CST
+  examples: |
+    - cst
+    - Computer Science & Technology
+    - Could you provide information about the Cst course?
+    - What are the details of the cst course?
+    - How many available seats are there in the cst course?
+    - Are there any seats left for the cst course?
+    - What is the duration of the cst course?
+    - How many years does the cst course last?
+
+- intent: CSE(AI&ML)
+  examples: |
+    - cseaiml
+    - Artificial Intelligence (cse)
+    - Machine Learning (cse)
+    - Could you provide information about the CSE(AI&ML) course?
+    - What are the details of the CSE(AI&ML) course?
+    - How many available seats are there in the CSE(AI&ML) course?
+    - Are there any seats left for the CSE(AI&ML) course?
+    - What is the duration of the CSE(AI&ML) course?
+    - How many years does the CSE(AI&ML) course last?
+
+- intent: CSE(Data Science)
+  examples: |
+    - CSE(Data Science)
+    - datascience
+    - DS
+    - Could you provide information about the CSE(Data Science) course?
+    - What are the details of the CSE(Data Science) course?
+    - How many available seats are there in the CSE(Data Science) course?
+    - Are there any seats left for the CSE(Data Science) course?
+    - What is the duration of the CSE(Data Science) course?
+    - How many years does the CSE(Data Science) course last?
+
+- intent: CSE(Iot)
+  examples: |
+    - CSEIot
+    - Internet of Things
+    - iot
+    - Could you provide information about the CSE(Iot) course?
+    - What are the details of the CSE(Iot) course?
+    - How many available seats are there in the CSE(Iot) course?
+    - Are there any seats left for the CSE(Iot) course?
+    - What is the duration of the CSE(Iot) course?
+    - How many years does the CSE(Iot) course last?
+
+- intent: ECE
+  examples: |
+    - ece
+    - Electronics and Communication Engineering
+    - Could you provide information about the ECE course?
+    - What are the details of the ECE course?
+    - How many available seats are there in the ECE course?
+    - Are there any seats left for the ECE course?
+    - What is the duration of the ECE course?
+    - How many years does the ECE course last?
+
+- intent: ECT
+  examples: |
+    - ect
+    - Could you provide information about the ECT course?
+    - What are the details of the ECT course?
+    - How many available seats are there in the ECT course?
+    - Are there any seats left for the ECT course?
+    - What is the duration of the ECT course?
+    - How many years does the ECT course last?
+
+- intent: EEE
+  examples: |
+    - eee
+    - Electronics and Communication Technology
+    - Could you provide information about the EEE course?
+    - What are the details of the EEE course?
+    - How many available seats are there in the EEE course?
+    - Are there any seats left for the EEE course?
+    - What is the duration of the EEE course?
+    - How many years does the EEE course last?
+
+- intent: IT
+  examples: |
+    - it
+    - Information Technology
+    - Could you provide information about the IT course?
+    - What are the details of the IT course?
+    - How many available seats are there in the IT course?
+    - Are there any seats left for the IT course?
+    - What is the duration of the IT course?
+    - How many years does the IT course last?
+
+- intent: MECH
+  examples: |
+    - mech
+    - Mechanical Engineering
+    - Could you provide information about the MECH course?
+    - What are the details of the MECH course?
+    - How many available seats are there in the MECH course?
+    - Are there any seats left for the MECH course?
+    - What is the duration of the MECH course?
+    - How many years does the MECH course last?
+
+- intent: M.Tech
+  examples: |
+    - MTech
+    - Master of Technology
+    - What are the courses offered in the M.Tech program?
+    - Can you list the majors available within the M.Tech degree?
+    - I'm interested in the M.Tech program. What specific areas of study does it cover?
+    - Could you give me an overview of the courses included in the M.Tech program?
+    - What are the core courses required for completing a M.Tech degree?
+    - I'm considering enrolling in M.Tech. What are the different specializations or concentrations available?
+
+- intent: CSE(M.Tech)
+  examples: |
+    - csemtech
+    - cse Master of Technology
+    - Could you provide information about the CSE(M.Tech) course?
+    - What are the details of the CSE(M.Tech) course?
+    - How many available seats are there in the CSE(M.Tech) course?
+    - Are there any seats left for the CSE(M.Tech) course?
+    - What is the duration of the CSE(M.Tech) course?
+    - How many years does the CSE(M.Tech) course last?
+
+- intent: VLS&ES
+  examples: |
+    - vlses
+    - Very Large Scale Integration & Embedded Systems
+    - Could you provide information about the VLS&ES course?
+    - What are the details of the VLS&ES course?
+    - How many available seats are there in the VLS&ES course?
+    - Are there any seats left for the VLS&ES course?
+    - What is the duration of the VLS&ES course?
+    - How many years does the VLS&ES course last?
+
+- intent: CE&SP
+  examples: |
+    - cesp
+    - Construction Engineering and Structural Planning
+    - Could you provide information about the CE&SP course?
+    - What are the details of the CE&SP course?
+    - How many available seats are there in the CE&SP course?
+    - Are there any seats left for the CE&SP course?
+    - What is the duration of the CE&SP course?
+    - How many years does the CE&SP course last?
+
+- intent: Electronics
+  examples: |
+    - electronics
+    - Could you provide information about the Electronics course?
+    - What are the details of the Electronics course?
+    - How many available seats are there in the Electronics course?
+    - Are there any seats left for the Electronics course?
+    - What is the duration of the Electronics course?
+    - How many years does the Electronics course last?
+
+- intent: CAD&CAM
+  examples: |
+    - cadcam
+    - Computer-Aided Design and Computer-Aided Manufacturing
+    - Could you provide information about the CAD&CAM course?
+    - What are the details of the CAD&CAM course?
+    - How many available seats are there in the CAD&CAM course?
+    - Are there any seats left for the CAD&CAM course?
+    - What is the duration of the CAD&CAM course?
+    - How many years does the CAD&CAM course last?
+
+
+- intent: MBA
+  examples: |
+    - MBA
+    - Master of Business Administration
+    - What are the courses offered in the MBA program?
+    - Can you list the majors available within the MBA degree?
+    - I'm interested in the MBA program. What specific areas of study does it cover?
+    - Could you give me an overview of the courses included in the MBA program?
+    - What are the core courses required for completing a MBA degree?
+    - I'm considering enrolling in MBA. What are the different specializations or concentrations available?
+
+- intent: Coursesof MBA
+  examples: |
+    - mba
+    - Master of Business Administration
+    - Could you provide information about the MBA course?
+    - What are the details of the MBA course?
+    - How many available seats are there in the MBA course?
+    - Are there any seats left for the MBA course?
+    - What is the duration of the MBA course?
+    - How many years does the MBA course last?
+
+- intent: Diplomo
+  examples: |
+    - Diplomo
+    - What are the courses offered in the Diplomo program?
+    - Can you list the majors available within the Diplomo degree?
+    - I'm interested in the Diplomo program. What specific areas of study does it cover?
+    - Could you give me an overview of the courses included in the Diplomo program?
+    - What are the core courses required for completing a Diplomo degree?
+    - I'm considering enrolling in Diplomo. What are the different specializations or concentrations available?
+
+- intent: DECE
+  examples: |
+    - dece
+    - Diploma in Electronics and Communication Engineering
+    - Could you provide information about the DECE course?
+    - What are the details of the DECE course?
+    - How many available seats are there in the DECE course?
+    - Are there any seats left for the DECE course?
+    - What is the duration of the DECE course?
+    - How many years does the DECE course last?
+
+- intent: DCME
+  examples: |
+    - dcme
+    - Diploma in Computer Engineering
+    - Could you provide information about the DCME course?
+    - What are the details of the DCME course?
+    - How many available seats are there in the DCME course?
+    - Are there any seats left for the DCME course?
+    - What is the duration of the DCME course?
+    - How many years does the DCME course last?
+
+- intent: DEEE
+  examples: |
+    - deee
+    - Diploma in Electrical and Electronics Engineering
+    - Could you provide information about the DEEE course?
+    - What are the details of the DEEE course?
+    - How many available seats are there in the DEEE course?
+    - Are there any seats left for the DEEE course?
+    - What is the duration of the DEEE course?
+    - How many years does the DEEE course last?
+
+- intent: DME
+  examples: |
+    - dme
+    - Diploma in Mechanical Engineering
+    - Could you provide information about the DME course?
+    - What are the details of the DME course?
+    - How many available seats are there in the DME course?
+    - Are there any seats left for the DME course?
+    - What is the duration of the DME course?
+    - How many years does the DME course last?
+
+
+
+
+- intent: Dept
+  examples: |
+    - departmentd
+    - How many departments are there in the organization?
+    - Can you provide a list of all the departments in the company?
+    - What are the different departments within the organization?
+    - Could you tell me the names of the departments in the company?
+    - What areas do the different departments cover within the organization?
+    - How are the departments organized within the organization?
+
+- intent: AS&H.DT
+  examples: |
+    - timetable AS&H
+    - Can I see the timetable for the AS&H department?
+    - Where can I find the schedule for AS&H department classes?
+    - What is the class timetable for AS&H students?
+    - Could you provide me with the AS&H department's timetable?
+    - When are the classes scheduled for AS&H courses?
+    - Is there a specific timetable for AS&H lab sessions?
+    - Are there any changes to the AS&H department timetable this week?
+    - Can I access the AS&H department timetable online?
+    - Are there any breaks or free periods in the AS&H department timetable?
+- intent: Civil.DT
+  examples: |
+    - timetable Civil
+    - Can I see the timetable for the Civil department?
+    - Where can I find the schedule for Civil department classes?
+    - What is the class timetable for Civil students?
+    - Could you provide me with the Civil department's timetable?
+    - When are the classes scheduled for Civil courses?
+    - Is there a specific timetable for Civil lab sessions?
+    - Are there any changes to the Civil department timetable this week?
+    - Can I access the Civil department timetable online?
+    - Are there any breaks or free periods in the Civil department timetable?
+- intent: ECT.DT
+  examples: |
+    - timetable ECT
+    - Can I see the timetable for the ECT department?
+    - Where can I find the schedule for ECT department classes?
+    - What is the class timetable for ECT students?
+    - Could you provide me with the ECT department's timetable?
+    - When are the classes scheduled for ECT courses?
+    - Is there a specific timetable for ECT lab sessions?
+    - Are there any changes to the ECT department timetable this week?
+    - Can I access the ECT department timetable online?
+    - Are there any breaks or free periods in the ECT department timetable?
+- intent: CSE.DT
+  examples: |
+    - timetable CSE
+    - Can I see the timetable for the CSE department?
+    - Where can I find the schedule for CSE department classes?
+    - What is the class timetable for CSE students?
+    - Could you provide me with the CSE department's timetable?
+    - When are the classes scheduled for CSE courses?
+    - Is there a specific timetable for CSE lab sessions?
+    - Are there any changes to the CSE department timetable this week?
+    - Can I access the CSE department timetable online?
+    - Are there any breaks or free periods in the CSE department timetable?
+- intent: CST.DT
+  examples: |
+    - timetable CST
+    - Can I see the timetable for the CST department?
+    - Where can I find the schedule for CST department classes?
+    - What is the class timetable for CST students?
+    - Could you provide me with the CST department's timetable?
+    - When are the classes scheduled for CST courses?
+    - Is there a specific timetable for CST lab sessions?
+    - Are there any changes to the CST department timetable this week?
+    - Can I access the CST department timetable online?
+    - Are there any breaks or free periods in the CST department timetable?
+- intent: ECE.DT
+  examples: |
+    - timetable ECE
+    - Can I see the timetable for the ECE department?
+    - Where can I find the schedule for ECE department classes?
+    - What is the class timetable for ECE students?
+    - Could you provide me with the ECE department's timetable?
+    - When are the classes scheduled for ECE courses?
+    - Is there a specific timetable for ECE lab sessions?
+    - Are there any changes to the ECE department timetable this week?
+    - Can I access the ECE department timetable online?
+    - Are there any breaks or free periods in the ECE department timetable?
+- intent: EEE.DT
+  examples: |
+    - timetable EEE
+    - Can I see the timetable for the EEE department?
+    - Where can I find the schedule for EEE department classes?
+    - What is the class timetable for EEE students?
+    - Could you provide me with the EEE department's timetable?
+    - When are the classes scheduled for EEE courses?
+    - Is there a specific timetable for EEE lab sessions?
+    - Are there any changes to the EEE department timetable this week?
+    - Can I access the EEE department timetable online?
+    - Are there any breaks or free periods in the EEE department timetable?
+- intent: IT.DT
+  examples: |
+    - timetable IT
+    - Can I see the timetable for the IT department?
+    - Where can I find the schedule for IT department classes?
+    - What is the class timetable for IT students?
+    - Could you provide me with the IT department's timetable?
+    - When are the classes scheduled for IT courses?
+    - Is there a specific timetable for IT lab sessions?
+    - Are there any changes to the IT department timetable this week?
+    - Can I access the IT department timetable online?
+    - Are there any breaks or free periods in the IT department timetable?
+- intent: AI&ML.DT
+  examples: |
+    - timetable AI&ML
+    - Can I see the timetable for the AI&ML department?
+    - Where can I find the schedule for AI&ML department classes?
+    - What is the class timetable for AI&ML students?
+    - Could you provide me with the AI&ML department's timetable?
+    - When are the classes scheduled for AI&ML courses?
+    - Is there a specific timetable for AI&ML lab sessions?
+    - Are there any changes to the AI&ML department timetable this week?
+    - Can I access the AI&ML department timetable online?
+    - Are there any breaks or free periods in the AI&ML department timetable?
+- intent: MECH.DT
+  examples: |
+    - timetable MECH
+    - Can I see the timetable for the MECH department?
+    - Where can I find the schedule for MECH department classes?
+    - What is the class timetable for MECH students?
+    - Could you provide me with the MECH department's timetable?
+    - When are the classes scheduled for MECH courses?
+    - Is there a specific timetable for MECH lab sessions?
+    - Are there any changes to the MECH department timetable this week?
+    - Can I access the MECH department timetable online?
+    - Are there any breaks or free periods in the MECH department timetable?
+- intent: MBA.DT
+  examples: |
+    - timetable MBA
+    - Can I see the timetable for the MBA department?
+    - Where can I find the schedule for MBA department classes?
+    - What is the class timetable for MBA students?
+    - Could you provide me with the MBA department's timetable?
+    - When are the classes scheduled for MBA courses?
+    - Is there a specific timetable for MBA lab sessions?
+    - Are there any changes to the MBA department timetable this week?
+    - Can I access the MBA department timetable online?
+    - Are there any breaks or free periods in the MBA department timetable?
+
+- intent: Infrastructure
+  examples: |
+    - infra
+    - library
+    - sports
+    - environment
+    - about college
+    - infrastructure
+    - Is there a dedicated area for student gatherings or events?
+    - How are the classrooms equipped?
+    - Do they have audiovisual facilities?
+    - Can you provide information about the college's environmental initiatives or sustainability efforts?
+
+- intent: Placements
+  examples: |
+    - Placements
+    - What is the placement percentage of the college?
+    - Can you provide information about the average salary package offered during placements?
+    - Which companies visit the college for placements?
+    - What is the placement record of specific departments or courses?
+    - How does the college prepare students for placements?
+    - Can you share some success stories or testimonials from students regarding placements?
+    - Are there any internship opportunities provided by the college?
+    - Can you provide details about the placement process followed by the college?
+    - What is the placement support system like at the college?
+    - Are there any alumni networks or connections that help with placements?
+
+- intent: Hostel
+  examples: |
+    - hstl facility
+    - Hostel
+    - What types of accommodation options are available in the hostel?
+    - Can you provide details about the amenities offered in the hostel rooms?
+    - How many students typically share a room in the hostel?
+    - Are there separate hostels for male and female students?
+    - What are the meal options available in the hostel mess? Is it included in the hostel fees?
+    - Can students cook their own meals in the hostel kitchen?
+    - Are there any laundry facilities available in the hostel?
+    - What are the security measures in place in the hostel premises?
+    - Is there a curfew for students in the hostel?
+    - How do students apply for hostel accommodation, and what is the allocation process?
+    - Are there any recreational facilities available in the hostel, such as a common room or sports facilities?
+    - How is the cleanliness and maintenance of the hostel ensured?
+    - Are there any study spaces or libraries within the hostel premises?
+    - Can students receive guests or visitors in the hostel?
+    - What is the procedure for reporting maintenance issues or requesting repairs in the hostel rooms?
+
+- intent: FeeStructure
+  examples: |
+    - fee
+    - FeeStructure
+    - What is the fee structure for [specific program/course] at the college?
+    - Can you provide details about the tuition fees for undergraduate programs?
+    - How much does it cost to study [specific program] per semester?
+    - Are there any additional fees apart from tuition, such as hostel fees or examination fees?
+    - Can you break down the fee structure for international students?
+    - Are there any scholarships or financial aid options available to help with the fees?
+    - What is the payment schedule for the fees? Is it paid annually, per semester, or monthly?
+    - Do fees vary for different departments or programs within the college?
+    - How can I get a detailed fee statement for my current semester/year?
+
+- intent: Transport
+  examples: |
+    - bus
+    - transport
+    - What are the bus routes provided by the college's transportation facility?
+    - Can you provide details about the pickup/drop-off points along each bus route?
+    - How frequently do the buses operate?
+    - Are there any special arrangements for students or staff with disabilities?
+    - How do I apply for a bus pass or transportation service?
+    - Is there a mobile app or online system to track the bus locations in real-time?
+    - What are the operating hours of the transportation service?
+    - Are there any additional costs associated with using the transportation service?
+    - How do I report issues or provide feedback about the transportation service?
+    -Can I request additional bus stops or changes to existing routes?
+
+- intent: NAAC
+  examples: |
+    - naac
+    - NAAC
+    - What is the NAAC accreditation status of the college?
+    - Can you provide details about the NAAC accreditation process undergone by the college?
+    - What is the grade awarded to the college by NAAC?
+    - When was the last NAAC assessment conducted for the college?
+    - What are the key parameters evaluated by NAAC during the accreditation process?
+    - Can you share the NAAC accreditation report or document for the college?
+    - How does the NAAC accreditation benefit the college and its stakeholders?
+    - Are there any specific areas highlighted for improvement in the NAAC assessment report?
+    - How often does the college undergo NAAC accreditation?
+    - Can you provide information about the NAAC criteria met by the college to attain accreditation?
+
+- intent: Sasi
+  examples: |
+    - vison
+    - mison
+    - About collge
+    - Why this college
+    - About vison and mison
+    - Special about this college
+    - Objective of the college
+
+- intent: Sasievents
+  examples: |
+    - events
+    - Can i Know about the events in the college
+    - extracircular activites
+
+- intent: Faculty
+  examples: |
+    - faculty details
+    - names of faculty
+    - list of faculty
+
+- intent: FacultyCount
+  examples: |
+    - no of availble faculty count
+    - total no of faculty
+    - faculty count
+
+- intent: Studentscount
+  examples: |
+    - no of availble students count
+    - total no of students
