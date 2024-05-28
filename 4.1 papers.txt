@@ -1,0 +1,33 @@
+Social Presence and Imagery Processing as Predictors of Chatbot Continuance Intention in Human-AI-Interaction
+An AI-Based Medical Chatbot Model for Infectious Disease Prediction
+LAW-U: Legal Guidance Through Artificial Intelligence Chatbot for Sexual Violence Victims and Survivors
+Entertainment Chatbot for the Digital Inclusion of Elderly People Without Abstraction Capabilities
+KBot: A Knowledge Graph Based ChatBot for Natural Language Understanding Over Linked Data
+JAICOB: A Data Science Chatbot
+Retrieval-Polished Response Generation for Chatbot
+Xatkit: A Multimodal Low-Code Chatbot Development Framework
+Multi-Modal Chatbot in Intelligent Manufacturing
+A Conversation-Driven Approach for Chatbot Management
+--------------------------------------------------------------------------------------------------------------
+Ghanian school Chatbot(springers)
+Integrating conversational agents and knowledge graphs within the scholary domain(IEEE)
+Chat2VIS: Generating Data Visualizations via Natural Language Using ChatGPT, Codex and GPT-3 Large Language Models
+Improved Trust in Human-Robot Collaboration With ChatGPT
+Are You a Cyborg, Bot or Human?—A Survey on Detecting Fake News Spreaders
+Enhancements to the Sequence-to-Sequence-Based Natural Answer Generation Models
+Evaluation of Conversational Agents: Understanding Culture, Context and Environment in Emotion Detection
+Evaluating the Intention for the Adoption of Artificial Intelligence-Based Robots in the University to Educate the Students
+Push-to-Trend: A Novel Framework to Detect Trend Promoters in Trending Hashtags
+ToD4IR: A Humanised Task-Oriented Dialogue System for Industrial Robots
+---------------------------------------------------------------------------------------------------------------
+Can a Chatbot Comfort Humans? Studying the Impact of a Supportive Chatbot on Users' Self-Perceived Stress
+Experimentation for Chatbot Usability Evaluation: A Secondary Study
+Integrating Conversational Agents and Knowledge Graphs Within the Scholarly Domain
+Enhancing Conversational Model With Deep Reinforcement Learning and Adversarial Learning
+Model-Driven Approaches for Conversational Agents Development: A Systematic Mapping Study
+Bio-Inspiring Learning Style Chatbot Inventory Using Brain Computing Interface to Increase the Efficiency of E-Learning
+The Use of Chatbots in Digital Business Transformation: A Systematic Literature Review
+Advantages and Constraints of a Hybrid Model K-12 E-Learning Assistant Chatbot
+The Ethico-Political Universe of ChatGPT
+SEQ2SEQ++: A Multitasking-Based Seq2seq Model to Generate Meaningful and Relevant Answers
+Experimentation for Chatbot Usability Evaluation: A Secondary Study
