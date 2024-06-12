@@ -1,0 +1,58 @@
+[
+  {
+    "text": "seats",
+    "intent": "Cse",
+    "intent_prediction": {
+      "name": "Infrastructure",
+      "confidence": 0.14533460140228271
+    }
+  },
+  {
+    "text": "MBA",
+    "intent": "MBA",
+    "intent_prediction": {
+      "name": "Coursesof MBA",
+      "confidence": 0.7207706570625305
+    }
+  },
+  {
+    "text": "Master of Business Administration",
+    "intent": "MBA",
+    "intent_prediction": {
+      "name": "Coursesof MBA",
+      "confidence": 0.7714131474494934
+    }
+  },
+  {
+    "text": "What are the courses offered in the MBA program?",
+    "intent": "MBA",
+    "intent_prediction": {
+      "name": "Coursesof MBA",
+      "confidence": 0.4410583972930908
+    }
+  },
+  {
+    "text": "I'm interested in the MBA program. What specific areas of study does it cover?",
+    "intent": "MBA",
+    "intent_prediction": {
+      "name": "Coursesof MBA",
+      "confidence": 0.45625144243240356
+    }
+  },
+  {
+    "text": "Could you give me an overview of the courses included in the MBA program?",
+    "intent": "MBA",
+    "intent_prediction": {
+      "name": "Coursesof MBA",
+      "confidence": 0.501912534236908
+    }
+  },
+  {
+    "text": "I'm considering enrolling in MBA. What are the different specializations or concentrations available?",
+    "intent": "MBA",
+    "intent_prediction": {
+      "name": "Coursesof MBA",
+      "confidence": 0.5372070670127869
+    }
+  }
+]

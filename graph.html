@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style id="graph-style">
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.getElementById('graph-style').sheet.cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label="utter_Computer Science & Engineering_M. Tech"];
+2 [class="", fontsize=12, label="utter_VLSI&ES"];
+3 [class="", fontsize=12, label="utter_CE&SP"];
+4 [class="", fontsize=12, label="utter_Power Electronics"];
+5 [class="", fontsize=12, label="utter_CAD&CAM"];
+6 [class="", fontsize=12, label=utter_MBA];
+7 [class="", fontsize=12, label="utter_Master of Business Administration"];
+8 [class="", fontsize=12, label=utter_Diploma];
+9 [class="", fontsize=12, label=utter_DECE];
+10 [class="", fontsize=12, label=utter_DCME];
+11 [class="", fontsize=12, label=utter_DEEE];
+12 [class="", fontsize=12, label=utter_DME];
+13 [class="", fontsize=12, label=utter_Dept];
+14 [class="", fontsize=12, label="utter_AS&H.T"];
+15 [class="", fontsize=12, label="utter_Civil.T"];
+16 [class="", fontsize=12, label="utter_ECT.T"];
+17 [class="", fontsize=12, label="utter_CSE.T"];
+18 [class="", fontsize=12, label="utter_CST.T"];
+19 [class="", fontsize=12, label="utter_ECE.T"];
+20 [class="", fontsize=12, label="utter_EEE.T"];
+21 [class="", fontsize=12, label="utter_IT.T"];
+22 [class="", fontsize=12, label="utter_AI&ML.T"];
+23 [class="", fontsize=12, label="utter_MECH.T"];
+24 [class="", fontsize=12, label="utter_MBA.T"];
+25 [class="", fontsize=12, label=utter_sasi];
+26 [class="", fontsize=12, label=utter_infra];
+27 [class="", fontsize=12, label=utter_placements];
+28 [class="", fontsize=12, label=utter_hstl];
+29 [class="", fontsize=12, label=utter_fee];
+30 [class="", fontsize=12, label=utter_transport];
+31 [class="", fontsize=12, label=utter_naac];
+32 [class="", fontsize=12, label=utter_events];
+33 [class="", fontsize=12, label=utter_faculty];
+34 [class="", fontsize=12, label=utter_facultycount];
+35 [class="", fontsize=12, label=utter_studentscount];
+36 [class="", fontsize=12, label=utter_greet];
+37 [class="", fontsize=12, label=utter_happy];
+39 [class="", fontsize=12, label=utter_cheer_up];
+40 [class="", fontsize=12, label=utter_did_that_help];
+45 [class="", fontsize=12, label=utter_goodbye];
+46 [class="", fontsize=12, label=utter_programsoffered];
+47 [class="", fontsize=12, label="utter_B.Tech"];
+48 [class="", fontsize=12, label="utter_Artificial Intelligence & Machine Learning"];
+49 [class="", fontsize=12, label="utter_Civil Engineering"];
+50 [class="", fontsize=12, label="utter_Computer Science & Engineering"];
+51 [class="", fontsize=12, label="utter_Computer Science & Technology"];
+52 [class="", fontsize=12, label="utter_CSE (Artificial Intelligence & Machine Learning)"];
+53 [class="", fontsize=12, label="utter_CSE ( Data Science)"];
+54 [class="", fontsize=12, label="utter_CSE ( Internet of Things and Cyber Security including Block Chain Technology)"];
+55 [class="", fontsize=12, label="utter_Electronics & Communication Engineering"];
+56 [class="", fontsize=12, label="utter_Electronics & Communication Technology"];
+57 [class="", fontsize=12, label="utter_Electrical & Electronics Engineering"];
+58 [class="", fontsize=12, label="utter_Information Technology"];
+59 [class="", fontsize=12, label="utter_Mechanical Engineering."];
+60 [class="", fontsize=12, label="utter_M.Tech"];
+61 [class="", fontsize=12, label="..."];
+64 [class="", fontsize=12, label=utter_iamabot];
+65 [class=intent, fillcolor=lightblue, label="How many years does the CSE(M.Tech) course last?", shape=rect, style=filled];
+66 [class=intent, fillcolor=lightblue, label="Master of Business Administration", shape=rect, style=filled];
+67 [class=intent, fillcolor=lightblue, label="How many available seats are there in the MBA course?", shape=rect, style=filled];
+68 [class=intent, fillcolor=lightblue, label="I'm considering enrolling in Diplomo. What are the different specializations or concentrations available?", shape=rect, style=filled];
+69 [class=intent, fillcolor=lightblue, label="How many years does the DECE course last?", shape=rect, style=filled];
+70 [class=intent, fillcolor=lightblue, label="What areas do the different departments cover within the organization?", shape=rect, style=filled];
+71 [class=intent, fillcolor=lightblue, label="Are there any breaks or free periods in the AS&H department timetable?", shape=rect, style=filled];
+72 [class=intent, fillcolor=lightblue, label="Objective of the college", shape=rect, style=filled];
+73 [class=intent, fillcolor=lightblue, label="hey there", shape=rect, style=filled];
+74 [class=intent, fillcolor=lightblue, label="Could you tell me more about the courses or degrees available?", shape=rect, style=filled];
+75 [class=intent, fillcolor=lightblue, label="Could you give me an overview of the courses included in the B.Tech program?", shape=rect, style=filled];
+76 [class=intent, fillcolor=lightblue, label="Are there any seats left for the AI & ML course?", shape=rect, style=filled];
+77 [class=intent, fillcolor=lightblue, label="I'm interested in the M.Tech program. What specific areas of study does it cover?", shape=rect, style=filled];
+78 [class=intent, fillcolor=lightblue, label="How many years does the VLS&ES course last?", shape=rect, style=filled];
+79 [class=intent, fillcolor=lightblue, label="Could you provide information about the CE&SP course?", shape=rect, style=filled];
+80 [class=intent, fillcolor=lightblue, label="Could you provide information about the Electronics course?", shape=rect, style=filled];
+81 [class=intent, fillcolor=lightblue, label="Computer-Aided Design and Computer-Aided Manufacturing", shape=rect, style=filled];
+82 [class=intent, fillcolor=lightblue, label="What is the duration of the DCME course?", shape=rect, style=filled];
+83 [class=intent, fillcolor=lightblue, label="How many available seats are there in the DEEE course?", shape=rect, style=filled];
+84 [class=intent, fillcolor=lightblue, label="Diploma in Mechanical Engineering", shape=rect, style=filled];
+85 [class=intent, fillcolor=lightblue, label="Could you provide me with the Civil department's timetable?", shape=rect, style=filled];
+86 [class=intent, fillcolor=lightblue, label="Are there any changes to the ECT department timetable this week?", shape=rect, style=filled];
+87 [class=intent, fillcolor=lightblue, label="What is the class timetable for CSE students?", shape=rect, style=filled];
+88 [class=intent, fillcolor=lightblue, label="What is the class timetable for CST students?", shape=rect, style=filled];
+89 [class=intent, fillcolor=lightblue, label="Are there any changes to the ECE department timetable this week?", shape=rect, style=filled];
+90 [class=intent, fillcolor=lightblue, label="Can I see the timetable for the EEE department?", shape=rect, style=filled];
+91 [class=intent, fillcolor=lightblue, label="Could you provide me with the IT department's timetable?", shape=rect, style=filled];
+92 [class=intent, fillcolor=lightblue, label="Can I access the AI&ML department timetable online?", shape=rect, style=filled];
+93 [class=intent, fillcolor=lightblue, label="Can I see the timetable for the MECH department?", shape=rect, style=filled];
+94 [class=intent, fillcolor=lightblue, label="What is the class timetable for MBA students?", shape=rect, style=filled];
+95 [class=intent, fillcolor=lightblue, label=library, shape=rect, style=filled];
+96 [class=intent, fillcolor=lightblue, label="Can you provide details about the placement process followed by the college?", shape=rect, style=filled];
+97 [class=intent, fillcolor=lightblue, label="What are the meal options available in the hostel mess? Is it included in the hostel fees?", shape=rect, style=filled];
+98 [class=intent, fillcolor=lightblue, label="What is the fee structure for [specific program/course] at the college?", shape=rect, style=filled];
+99 [class=intent, fillcolor=lightblue, label=bus, shape=rect, style=filled];
+100 [class=intent, fillcolor=lightblue, label=NAAC, shape=rect, style=filled];
+101 [class=intent, fillcolor=lightblue, label="extracircular activites", shape=rect, style=filled];
+102 [class=intent, fillcolor=lightblue, label="names of faculty", shape=rect, style=filled];
+103 [class=intent, fillcolor=lightblue, label="faculty count", shape=rect, style=filled];
+104 [class=intent, fillcolor=lightblue, label="total no of students", shape=rect, style=filled];
+105 [class=intent, fillcolor=lightblue, label=perfect, shape=rect, style=filled];
+106 [class=intent, fillcolor=lightblue, label=unhappy, shape=rect, style=filled];
+107 [class=intent, fillcolor=lightblue, label=indeed, shape=rect, style=filled];
+108 [class=intent, fillcolor=lightblue, label=never, shape=rect, style=filled];
+109 [class=intent, fillcolor=lightblue, label="Could you provide information about the Civil course?", shape=rect, style=filled];
+110 [class=intent, fillcolor=lightblue, label="Computer Science and Engineering", shape=rect, style=filled];
+111 [class=intent, fillcolor=lightblue, label="What are the details of the cst course?", shape=rect, style=filled];
+112 [class=intent, fillcolor=lightblue, label="Are there any seats left for the CSE(AI&ML) course?", shape=rect, style=filled];
+113 [class=intent, fillcolor=lightblue, label=DS, shape=rect, style=filled];
+114 [class=intent, fillcolor=lightblue, label="Could you provide information about the CSE(Iot) course?", shape=rect, style=filled];
+115 [class=intent, fillcolor=lightblue, label="What is the duration of the ECE course?", shape=rect, style=filled];
+116 [class=intent, fillcolor=lightblue, label="What is the duration of the ECT course?", shape=rect, style=filled];
+117 [class=intent, fillcolor=lightblue, label="What is the duration of the EEE course?", shape=rect, style=filled];
+118 [class=intent, fillcolor=lightblue, label="What is the duration of the IT course?", shape=rect, style=filled];
+119 [class=intent, fillcolor=lightblue, label="Could you provide information about the MECH course?", shape=rect, style=filled];
+120 [class=intent, fillcolor=lightblue, label="see you around", shape=rect, style=filled];
+121 [class=intent, fillcolor=lightblue, label="am I talking to a human?", shape=rect, style=filled];
+0 -> 61  [class="", key=NONE, label=""];
+0 -> 65  [class="", key=0];
+0 -> 66  [class="", key=0];
+0 -> 67  [class="", key=0];
+0 -> 68  [class="", key=0];
+0 -> 69  [class="", key=0];
+0 -> 70  [class="", key=0];
+0 -> 71  [class="", key=0];
+0 -> 72  [class="", key=0];
+0 -> 73  [class="", key=0];
+0 -> 74  [class="", key=0];
+0 -> 75  [class="", key=0];
+0 -> 76  [class="", key=0];
+0 -> 77  [class="", key=0];
+1 -> 78  [class="", key=0];
+2 -> 79  [class="", key=0];
+3 -> 80  [class="", key=0];
+4 -> 81  [class="", key=0];
+5 -> "-1"  [class="", key=NONE, label=""];
+6 -> "-1"  [class="", key=NONE, label=""];
+7 -> "-1"  [class="", key=NONE, label=""];
+8 -> "-1"  [class="", key=NONE, label=""];
+9 -> 82  [class="", key=0];
+10 -> 83  [class="", key=0];
+11 -> 84  [class="", key=0];
+12 -> "-1"  [class="", key=NONE, label=""];
+13 -> "-1"  [class="", key=NONE, label=""];
+14 -> 85  [class="", key=0];
+15 -> 86  [class="", key=0];
+16 -> 87  [class="", key=0];
+17 -> 88  [class="", key=0];
+18 -> 89  [class="", key=0];
+19 -> 90  [class="", key=0];
+20 -> 91  [class="", key=0];
+21 -> 92  [class="", key=0];
+22 -> 93  [class="", key=0];
+23 -> 94  [class="", key=0];
+24 -> "-1"  [class="", key=NONE, label=""];
+25 -> 95  [class="", key=0];
+26 -> 96  [class="", key=0];
+27 -> 97  [class="", key=0];
+28 -> 98  [class="", key=0];
+29 -> 99  [class="", key=0];
+30 -> 100  [class="", key=0];
+31 -> 101  [class="", key=0];
+32 -> 102  [class="", key=0];
+33 -> 103  [class="", key=0];
+34 -> 104  [class="", key=0];
+35 -> "-1"  [class="", key=NONE, label=""];
+36 -> 105  [class="", key=0];
+36 -> 106  [class="", key=0];
+37 -> "-1"  [class="", key=NONE, label=""];
+39 -> 40  [class="", key=NONE, label=""];
+40 -> 107  [class="", key=0];
+40 -> 108  [class="", key=0];
+45 -> "-1"  [class="", key=NONE, label=""];
+46 -> "-1"  [class="", key=NONE, label=""];
+47 -> "-1"  [class="", key=NONE, label=""];
+48 -> 109  [class="", key=0];
+49 -> 110  [class="", key=0];
+50 -> 111  [class="", key=0];
+51 -> 112  [class="", key=0];
+52 -> 113  [class="", key=0];
+53 -> 114  [class="", key=0];
+54 -> 115  [class="", key=0];
+55 -> 116  [class="", key=0];
+56 -> 117  [class="", key=0];
+57 -> 118  [class="", key=0];
+58 -> 119  [class="", key=0];
+59 -> "-1"  [class="", key=NONE, label=""];
+60 -> "-1"  [class="", key=NONE, label=""];
+61 -> 120  [class="", key=0];
+61 -> 121  [class="", key=0];
+64 -> "-1"  [class="", key=NONE, label=""];
+65 -> 1  [class="", key=0];
+66 -> 6  [class="", key=0];
+67 -> 7  [class="", key=0];
+68 -> 8  [class="", key=0];
+69 -> 9  [class="", key=0];
+70 -> 13  [class="", key=0];
+71 -> 14  [class="", key=0];
+72 -> 25  [class="", key=0];
+73 -> 36  [class="", key=0];
+74 -> 46  [class="", key=0];
+75 -> 47  [class="", key=0];
+76 -> 48  [class="", key=0];
+77 -> 60  [class="", key=0];
+78 -> 2  [class="", key=0];
+79 -> 3  [class="", key=0];
+80 -> 4  [class="", key=0];
+81 -> 5  [class="", key=0];
+82 -> 10  [class="", key=0];
+83 -> 11  [class="", key=0];
+84 -> 12  [class="", key=0];
+85 -> 15  [class="", key=0];
+86 -> 16  [class="", key=0];
+87 -> 17  [class="", key=0];
+88 -> 18  [class="", key=0];
+89 -> 19  [class="", key=0];
+90 -> 20  [class="", key=0];
+91 -> 21  [class="", key=0];
+92 -> 22  [class="", key=0];
+93 -> 23  [class="", key=0];
+94 -> 24  [class="", key=0];
+95 -> 26  [class="", key=0];
+96 -> 27  [class="", key=0];
+97 -> 28  [class="", key=0];
+98 -> 29  [class="", key=0];
+99 -> 30  [class="", key=0];
+100 -> 31  [class="", key=0];
+101 -> 32  [class="", key=0];
+102 -> 33  [class="", key=0];
+103 -> 34  [class="", key=0];
+104 -> 35  [class="", key=0];
+105 -> 37  [class="", key=0];
+106 -> 39  [class="", key=0];
+107 -> 37  [class="", key=0];
+108 -> 45  [class="", key=0];
+109 -> 49  [class="", key=0];
+110 -> 50  [class="", key=0];
+111 -> 51  [class="", key=0];
+112 -> 52  [class="", key=0];
+113 -> 53  [class="", key=0];
+114 -> 54  [class="", key=0];
+115 -> 55  [class="", key=0];
+116 -> 56  [class="", key=0];
+117 -> 57  [class="", key=0];
+118 -> 58  [class="", key=0];
+119 -> 59  [class="", key=0];
+120 -> 45  [class="", key=0];
+121 -> 64  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>
